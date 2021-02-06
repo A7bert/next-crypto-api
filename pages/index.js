@@ -1,18 +1,15 @@
-import Head from 'next/head'
+import Layout from '../components/Layout'
 import SearchBar from '../components/SearchBar'
 import CoinList from '../components/CoinList'
 
 export default function Home({filteredCoins}) {
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <SearchBar type="text" />
-      <CoinList filteredCoins={filteredCoins} />
-    </div>
+    <Layout>
+      <div className='coinApp'>
+        <SearchBar type="text" />
+        <CoinList filteredCoins={filteredCoins} />
+      </div>
+    </Layout>
   )
 }
 
